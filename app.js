@@ -1,8 +1,6 @@
-var isSubsequence = function (s, t) {
-	for (let i = 0; i < t.length; i++) {
-		if (s[0] === t[i]) {
-			s = s.slice(1);
-		}
+function fibonacci(n) {
+	if (n <= 1) {
+		return n;
 	}
-	return s.length === 0;
-};
+	return fibonacci(n - 1) + fibonacci(n - 2);
+}
