@@ -14,4 +14,13 @@ function fibonacci(n) {
 	}
 	return fib[n];
 }
+function fib(n, memo = []) {
+	if (memo[n] !== undefined) {
+		return memo[n];
+	}
+	if (n <= 1) {
+		return n;
+	}
+	return fib(n - 1, memo) + fib(n - 2, memo);
+}
 // https://www.geeksforgeeks.org/program-for-nth-fibonacci-number/
