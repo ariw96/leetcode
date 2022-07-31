@@ -1,4 +1,1 @@
-var reverseString = function (s) {
-	return s.reverse();
-};
-console.log(reverseString("hello"));
+console.log(1 + 2 + "3");
