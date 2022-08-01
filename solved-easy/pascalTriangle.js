@@ -17,3 +17,4 @@ var generate = function (numRows) {
 	}
 	return triangle;
 };
+console.log(generate(5));
