@@ -1,6 +1,9 @@
-let a = 1,
-	b = 2,
-	c = 3;
-d = a + b + c;
-j = a + b + c;
-console.log(d, j);
+function Car() {
+	this.name = "Car";
+	this.wheels = 4;
+	this.engines = 1;
+	this.seats = 5;
+	return { name: "ball" };
+}
+const myCar = new Car();
+console.log(myCar, myCar.name);

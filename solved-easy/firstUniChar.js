@@ -1,10 +1,16 @@
 var firstUniqChar = function (s) {
-	let temp = "";
-	let count = 0;
+	let map = {};
 	for (let i = 0; i < s.length; i++) {
-		temp = s[i];
-		if (s.includes(temp)) return count;
-		count++;
+		if (map[s[i]]) {
+			map[s[i]]++;
+		} else {
+			map[s[i]] = 1;
+		}
+	}
+	for (let i = 0; i < s.length; i++) {
+		if (map[s[i]] === 1) {
+			return i;
+		}
 	}
 	return -1;
 };
