@@ -1,9 +1,7 @@
-function Car() {
-	this.name = "Car";
-	this.wheels = 4;
-	this.engines = 1;
-	this.seats = 5;
-	return { name: "ball" };
+const f = ["abc", "def", "ghi"];
+if (f.indexOf("abc")) {
+	console.log("found");
+} else {
+	console.log("not found");
 }
-const myCar = new Car();
-console.log(myCar, myCar.name);
+console.log(f.indexOf("def"));
