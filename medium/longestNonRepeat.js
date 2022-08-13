@@ -1,17 +1,17 @@
 var lengthOfLongestSubstring = function (s) {
 	let string = "";
 	let curString = "";
+
 	for (let i = 0; i < s.length; i++) {
-		if (!curString.includes(s[i])) {
-			curString += s[i];
-			if (curString.length > string.length) {
-				string = curString;
-			}
-		} else {
-			curString = curString.substring(curString.indexOf(s[i]) - 1);
+		if (curString.includes(s[i])) {
+			curString = curString.substring(curString.indexOf(s[i]) + 1);
 		}
-		console.log([curString, string]);
+		curString += s[i];
+		if (curString.length > string.length) {
+			string = curString;
+		}
 	}
-	return string;
+	return string.length;
 };
 console.log(lengthOfLongestSubstring("pwwkew"));
+console.log(lengthOfLongestSubstring("aabaab!bb"));
