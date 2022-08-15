@@ -1,6 +1,3 @@
-for (var i = 0; i < 3; i++) {
-	setTimeout(() => console.log(i), 0);
-}
-for (let i = 0; i < 3; i++) {
-	setTimeout(() => console.log(i), 0);
-}
+var num = [1, 2, 3, 4];
+num.fill(5, 0, 1);
+console.log(num);
