@@ -1,3 +1,3 @@
 var num = [1, 2, 3, 4];
-num.fill(5, 0, 1);
+num.push(5);
 console.log(num);

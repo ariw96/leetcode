@@ -1,16 +1,8 @@
 var exist = function (board, word) {
-	let curLetterBoard = board[0][0];
-	let curLetterWord = word[0];
-	let indexW = 0;
-	let indexH = 0;
-	while (indexH < board.length) {
-		if (indexW === board[0].length) {
-			indexW = 0;
-		}
-		indexH++;
-		indexW++;
-	}
-	return curLetterWord;
+	let i = 0,
+		c = 0,
+		r = 0;
+	if ((i = word.length)) return true;
 };
 console.log(
 	exist(
