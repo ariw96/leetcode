@@ -2,7 +2,6 @@ var canCompleteCircuit = function (gas, cost) {
 	let total = 0;
 	let start = 0;
 	let sum = 0;
-	cost = cost.slice(1) + cost.slice(0, 1);
 
 	for (let i = 0; i < gas.length; i++) {
 		total += gas[i] - cost[i];
