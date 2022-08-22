@@ -1,16 +1,21 @@
-var fizzBuzz = function (n) {
-	let arr = [];
-	for (let i = 1; i <= n; i++) {
-		if (i % 3 === 0 && i % 5 === 0) {
-			arr.push("FizzBuzz");
-		} else if (i % 3 === 0) {
-			arr.push("Fizz");
-		} else if (i % 5 === 0) {
-			arr.push("Buzz");
-		} else {
-			arr.push(`${i}`);
-		}
-	}
-	return arr;
-};
-console.log(fizzBuzz(6));
+function arrange(sentence) {
+	// Write your code here
+
+	let arrangeSentence = sentence
+		.toLowerCase()
+		.split(" ")
+		.sort((a, b) => {
+			if (a.length > b.length) {
+				return 1;
+			} else if (a.length < b.length) {
+				return -1;
+			} else {
+				return 0;
+			}
+		})
+		.join(" ");
+	arrangeSentence.replace(".", "");
+	arrangeSentence =
+		arrangeSentence.charAt(0).toUpperCase() + arrangeSentence.slice(1) + ".";
+	return arrangeSentence;
+}
