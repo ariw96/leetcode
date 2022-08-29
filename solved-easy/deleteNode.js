@@ -1,4 +1,8 @@
 var deleteNode = function (node) {
-	node.val = node.next.val;
-	node.next = node.next.next;
+	while (listHead.val != null)
+		if (listHead.val > x) {
+			temp = listHead.val;
+			listHead.val = null;
+			listHead.val.next = temp;
+		}
 };
