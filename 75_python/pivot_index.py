@@ -1,18 +1,17 @@
         
         # https://leetcode.com/problems/find-pivot-index/
-from turtle import right
+from turtle import left, right
 
 
 class Solution:
     def pivotIndex(self, nums: List[int]) -> int:
-        left = 0
-        length = len(nums)
-        right = length
-        sum_left = 0
-        sum_right = 0
-        for i in range (length):
-           sum_right += nums[i]
+        total = sum(nums)
+        leftSum = 0
+        for i in range(len(nums)):
+             total = total - nums[i+1]
+             if leftSum == total:
+                return i 
+
+        return -1        
 
 
-        for i in range (length):
-          if (sum_left == sum_right - nums[i+1] ) return nums[i+1]
